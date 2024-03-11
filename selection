@@ -1,1 +1,64 @@
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RPG_Welcome_Screen
+{
+    public class WelcomeSelection
+    {
+        static void WelcomeScreen()
+        {
+            Console.WriteLine("__        __   _                               ____  _                       \r\n\\ \\      / /__| | ___ ___  _ __ ___   ___     |  _ \\| | __ _ _   _  ___ _ __ \r\n \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\    | |_) | |/ _` | | | |/ _ \\ '__|\r\n  \\ V  V /  __/ | (_| (_) | | | | | |  __/    |  __/| | (_| | |_| |  __/ |   \r\n   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|    |_|   |_|\\__,_|\\__, |\\___|_|   \r\n                                                             |___/           ");
+            Console.WriteLine($"           /\\                                                 /\\\r\n _         )( ______________________   ______________________ )(         _\r\n(_)///////(**)______________________> <______________________(**)\\\\\\\\\\\\\\(_)\r\n           )(                                                 )(\r\n           \\/                                                 \\/\r\n");
+            Console.WriteLine();
+            Console.WriteLine($" >Play ");
+            Console.WriteLine($" >Settings ");
+            Console.WriteLine($" >Credits ");
+            Console.WriteLine($" >Exit ");
+        }
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Console;
+
+namespace RPG_Welcome_Screen
+{
+    public class Game
+    {
+        public void Start()
+        {
+            WriteLine($"Game is loading!");
+            WriteLine($"Press any Key to exit...");
+
+            
+            if(ReadKey().Key == ConsoleKey.DownArrow)
+            {
+                WriteLine();
+                ForegroundColor = ConsoleColor.White;
+               
+            }
+            
+
+        }
+    }
+}
+
+namespace RPG_Welcome_Screen
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+          Game myGame = new Game();
+          myGame.Start();
+        }
+    }
+}
